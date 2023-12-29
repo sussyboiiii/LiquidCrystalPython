@@ -12,16 +12,6 @@ server_process = subprocess.Popen(["python", "./lcd.py"]) # or wherever your pat
 # Wait for the server to start
 time.sleep(1) 
 
-# Optional (to test ebike repo)
-# ph = "ph1234567890"
-# km = "km1234567890"
-# ah = "ah1234567890"
-# dgC = "dgC1234567890"
-# k1 = "k11234567890"
-# mt = "mt1234567890"
-# ms = "ms1234567890"
-# bat = "bat1234567890"
-
 def writechar(input, row, column):
     data = {
         'input': input,
@@ -44,10 +34,9 @@ def loop(): # Loops, make hello world move across screen, bit scuffed but you ca
             n = 0
             if column > 3:
                 column = 0
-                writechar("                    ", 0, column)
-        writechar(" ", n -1, column)
+        writechar(" ", (n - 1) if n > 0 else 0, column)
         writechar("Hello, World!", n, column)
-        time.sleep(0.25)
+        time.sleep(0.05)
 
 if __name__ == "__main__":
     setup()

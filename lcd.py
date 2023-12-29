@@ -13,11 +13,11 @@ INNER_GRID_HEIGHT = 8
 SPACING_BETWEEN_GRIDS_X = 8 
 SPACING_BETWEEN_GRIDS_Y = 10 
 SPACING = 1
-INNER_RECT_SIZE = 4
+INNER_RECT_SIZE = 8
 WHITE = (255, 255, 255)
 BLUE = (0, 0, 255)
-offset_x = 26
-offset_y = 42
+offset_x = (INNER_GRID_WIDTH + 1) + (INNER_RECT_SIZE * INNER_GRID_WIDTH)
+offset_y = (INNER_GRID_HEIGHT + 2) + (INNER_RECT_SIZE * INNER_GRID_HEIGHT)
 running = True
 last_input = None
 input_data = ""
@@ -62,8 +62,8 @@ while running:
         if input:
             input_data = json.loads(input.decode())
             last_input = input_data['input']
-            row1 = input_data["row"]
-            column = input_data["column"]
+            row1 = input_data["row"] if (GRID_WIDTH) > input_data["row"] > -1 else 0
+            column = input_data["column"] if (GRID_HEIGHT) > input_data["column"] > -1 else 0
             n1 = -1
             current_input = input_data['input'] if input_data else last_input
             if current_input is not None:
