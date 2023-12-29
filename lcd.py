@@ -89,12 +89,12 @@ while running:
                 for l1 in str(current_input):
                     n1 = n1 + 1
                     row = row1 + n1
-                    if row > 19:
+                    if row > (GRID_WIDTH - 1):
                         n1 = 0 
                         row = 0
                         row1 = 0
                         column = column + 1
-                        if column > 3:
+                        if column > (GRID_HEIGHT - 1):
                             column = 0
 
 
