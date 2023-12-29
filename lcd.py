@@ -70,7 +70,7 @@ while running:
                 if isinstance(current_input, int):
                     current_input = str(current_input)
 
-                match current_input:
+                match current_input: # optional but can stay here if you dont want to be annoyed
                     case "ph1234567890": drawthings(ph, row1, column)
                     case "km1234567890": drawthings(km, row1, column)
                     case "ah1234567890": drawthings(ah, row1, column)
