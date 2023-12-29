@@ -13,14 +13,14 @@ server_process = subprocess.Popen(["python", "./lcd.py"]) # or wherever your pat
 time.sleep(1) 
 
 # Optional (to test ebike repo)
-ph = "ph1234567890"
-km = "km1234567890"
-ah = "ah1234567890"
-dgC = "dgC1234567890"
-k1 = "k11234567890"
-mt = "mt1234567890"
-ms = "ms1234567890"
-bat = "bat1234567890"
+# ph = "ph1234567890"
+# km = "km1234567890"
+# ah = "ah1234567890"
+# dgC = "dgC1234567890"
+# k1 = "k11234567890"
+# mt = "mt1234567890"
+# ms = "ms1234567890"
+# bat = "bat1234567890"
 
 def writechar(input, row, column):
     data = {
@@ -30,11 +30,24 @@ def writechar(input, row, column):
     }
     s1.sendto(json.dumps(data).encode(), (host, port))
 
-def setup():
+column = 0
+
+def setup(): # Stuff to be run once
     pass
 
-def loop():
-    pass
+def loop(): # Loops, make hello world move across screen, bit scuffed but you can see how powerful this lcd library is :-)
+    global column
+    for n in range(20):
+        if n == 19:
+            writechar("                    ", 0, column)
+            column += 1
+            n = 0
+            if column > 3:
+                column = 0
+                writechar("                    ", 0, column)
+        writechar(" ", n -1, column)
+        writechar("Hello, World!", n, column)
+        time.sleep(0.25)
 
 if __name__ == "__main__":
     setup()

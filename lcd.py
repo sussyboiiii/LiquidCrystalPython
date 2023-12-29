@@ -92,7 +92,11 @@ while running:
                     if row > 19:
                         n1 = 0 
                         row = 0
+                        row1 = 0
                         column = column + 1
+                        if column > 3:
+                            column = 0
+
 
                     match l1:                                       # Characters to display, feel free to add you own characters, 
                         case "0": drawthings(zero, row, column)     # I used the phind vs code extension to recreate the original 
