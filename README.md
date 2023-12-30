@@ -30,3 +30,7 @@ The project consists of three main Python files:
 To see a demonstration of the LCD emulator in action, run the `helloworld.py` script. This will display the text "Hello, World!" on the virtual LCD screen.
 
 To get started with the LCD emulator, run the `main.py` script. This will start the LCD emulator in a separate process. You can then send data to the emulator via the UDP socket.
+
+## Contributing
+
+If you encounter any bugs, please feel free to open an issue or make a pull request. Thanks!
