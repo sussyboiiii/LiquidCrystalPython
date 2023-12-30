@@ -1,6 +1,8 @@
 # LCD Emulator Project
 
-This project is a Python-based LCD (Liquid Crystal Display) emulator. It is designed to simulate the behavior of an LCD, mimicking the functionality of the LiquidCrystal Arduino Libary. The emulator allows you to display text and other information on a virtual LCD screen, making it particularly useful for testing and debugging applications that use an LCD display without needing the physical hardware such as an arduino.
+This project is a Python-based LCD (Liquid Crystal Display) emulator. It is designed to simulate the behavior of an LCD, mimicking the functionality of an Arduino LCD. The emulator allows you to display text and other information on a virtual LCD screen, making it particularly useful for testing and debugging applications that use an LCD display without needing the physical hardware.
+
+The purpose of this project was to test the display logic of an e-bike display project ([vesc_lcd](https://github.com/sussyboiiii/vesc_lcd)) without needing an Arduino or LCD. As there wasn't anyway to do this without an arduino before, I made this repo.
 
 https://github.com/sussyboiiii/lcd_emulator/assets/90244617/2b281fca-d0cf-4127-9088-709247ffaccd
 
@@ -28,5 +30,3 @@ The project consists of three main Python files:
 To see a demonstration of the LCD emulator in action, run the `helloworld.py` script. This will display the text "Hello, World!" on the virtual LCD screen.
 
 To get started with the LCD emulator, run the `main.py` script. This will start the LCD emulator in a separate process. You can then send data to the emulator via the UDP socket.
-
-
