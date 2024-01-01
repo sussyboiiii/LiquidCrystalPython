@@ -46,21 +46,27 @@ case_to_function = {
 
 # Mapping characters to functions
 char_to_function = {
-    "0": zero, "1": one, "2": two, "3": three, "4": four,
-    "5": five, "6": six, "7": seven, "8": eight, "9": nine,
-    "A": A, "B": B, "C": C, "D": D, "E": E, "F": F,
-    "G": G, "H": H, "I": I, "J": J, "K": K, "L": L,
-    "M": M, "N": N, "O": O, "P": P, "Q": Q, "R": R,
-    "S": S, "T": T, "U": U, "V": V, "W": W, "X": X,
-    "Y": Y, "Z": Z, "a": a, "b": b, "c": c, "d": d,
-    "e": e, "f": f, "g": g, "h": h, "i": i, "j": j,
-    "k": k, "l": l, "m": m, "n": n, "o": o, "p": p,
-    "q": q, "r": r, "s": s, "t": t, "u": u, "v": v,
-    "w": w, "x": x, "y": y, "z": z, ".": dot, ",": comma,
-    "+": plus, "-": minus, "!": exclamation, "?": question,
-    "°": degree, "=": equals, "_": underscore, ":": colon,
-    ";": semicolon, "<": less_than, ">": greater_than,
-    "[": left_bracket, "]": right_bracket, "%": percentage
+                "%": percentage,
+             "°": degree, "=":equals, 
+           "_": underscore, ":": colon,
+         "2": two, "3": three, "4":  four,
+       "<" : less_than, ">":  greater_than,
+      "[": left_bracket, "]":  right_bracket,
+     "!": exclamation, "?": question,  "A": A,
+    "0": zero, "1": one, "+": plus, "-": minus,
+    ".":dot,",":comma,       "5": five, "6":six,
+   "y":y,"z":z,"B":B,          "w":w,"x":x,"C":C, 
+   ";":  semicolon,              "u": u, "v":  v,
+   "q": q, "r":  r,             "s":  s, "t" :t, 
+    "7": seven,"p":p,           "n": n, "o":  o,
+    "l":l,"m":m,"k":k,       "8":eight,"9":nine,
+     "f": f, "g": g, "h":h, "i":i,"j":j,"e": e, 
+      "Y":Y,"Z": Z, "a":a,"b":b,"c":c, "d": d,
+       "T": T, "U": U, "V": V, "W": W,"X":X,
+         "S":S,"O":O, "P": P, "Q": Q,"R":R,
+          "M": M, "N": N,"J": J, "K": K, 
+             "L": L,"G": G,"H":H,"I":I, 
+                "D": D, "E":E,"F":F
 }
 
 # Initialize the socket
